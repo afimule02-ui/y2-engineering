@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Y2Engineering.API/Y2Engineering.API.csproj" />
+  <Project Path="Y2Engineering.Application/Y2Engineering.Application.csproj" />
+  <Project Path="Y2Engineering.Domain/Y2Engineering.Domain.csproj" />
+  <Project Path="Y2Engineering.Infrastructure/Y2Engineering.Infrastructure.csproj" />
+  <Project Path="Y2Engineering.Persistence/Y2Engineering.Persistence.csproj" />
+  <Project Path="Y2Engineering.Tests/Y2Engineering.Tests.csproj" />
+</Solution>

@@ -1,0 +1,131 @@
+// Include theming for Angular Material with `mat.theme()`.
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  height: 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark theme overrides */
+html.dark-theme {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+        theme-type: dark,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+html.dark-theme body,
+html.dark-theme {
+  color-scheme: dark;
+}
+
+/* Dark theme global overrides for custom styles */
+html.dark-theme body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+html.dark-theme .site-footer {
+  background: #0a0f1a;
+}
+
+html.dark-theme .site-header {
+  background: #1a1a2e;
+  border-bottom-color: #2a2a3e;
+}
+
+html.dark-theme .card,
+html.dark-theme .panel,
+html.dark-theme .item,
+html.dark-theme .stat,
+html.dark-theme .form-card,
+html.dark-theme mat-card,
+html.dark-theme .table,
+html.dark-theme .vacancy,
+html.dark-theme .project,
+html.dark-theme .course,
+html.dark-theme .post,
+html.dark-theme .result {
+  background: #1e1e2e;
+  border-color: #2a2a3e;
+}
+
+html.dark-theme .brand-mark,
+html.dark-theme .side-brand .mark {
+  background: #1565C0;
+}
+
+html.dark-theme .cta-band {
+  background: #0d2b4a;
+}
+
+html.dark-theme .section.alt {
+  background: #161625;
+}
+
+html.dark-theme .lang-track {
+  background: #3a3a4e;
+}
+
+html.dark-theme .lang-track.on {
+  background: #1565C0;
+}
+
+html.dark-theme .badge {
+  background: #2a2a3e;
+}
+
+html.dark-theme .tabs button {
+  background: #1e1e2e;
+  border-color: #2a2a3e;
+}
+
+html.dark-theme .faq {
+  border-bottom-color: #2a2a3e;
+}
+
+html.dark-theme .hint {
+  background: #1e1e2e;
+}
+
+html.dark-theme .success {
+  background: #0d2818;
+  border-color: #1b5e20;
+}
+
+html.dark-theme .thead {
+  background: #1a1a2e;
+}
+
+/* Smooth transitions for all theme changes */
+html.dark-theme * {
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* You can add global styles to this file, and also import other style files */
